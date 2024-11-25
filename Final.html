@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Datos Curiosos - Más allá del jardín</title>
+  <style>
+    /* CSS incluido */
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f8f5f2;
+      color: #333;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background-color: #3a2c29;
+      color: #f8f5f2;
+      text-align: center;
+      padding: 1em 0;
+    }
+
+    h1 {
+      margin: 0;
+    }
+
+    main {
+      padding: 2em;
+    }
+
+    section {
+      margin-bottom: 2em;
+    }
+
+    .datos ul {
+      list-style: square inside;
+    }
+
+    button {
+      background-color: #3a2c29;
+      color: #f8f5f2;
+      border: none;
+      padding: 0.5em 1em;
+      cursor: pointer;
+      font-size: 1em;
+      border-radius: 5px;
+    }
+
+    button:hover {
+      background-color: #573d35;
+    }
+
+    footer {
+      background-color: #3a2c29;
+      color: #f8f5f2;
+      text-align: center;
+      padding: 1em 0;
+    }
+
+    .galeria {
+      display: flex;
+      justify-content: space-around;
+      gap: 1em;
+      flex-wrap: wrap;
+    }
+
+    .galeria figure {
+      text-align: center;
+      max-width: 200px;
+    }
+
+    .galeria img {
+      width: 100%;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      transition: transform 0.3s ease;
+    }
+
+    .galeria img:hover {
+      transform: scale(1.1);
+    }
+
+    .galeria figcaption {
+      margin-top: 0.5em;
+      font-size: 0.9em;
+      color: #555;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>🌲 Más allá del jardín - Datos Curiosos 🌌</h1>
+  </header>
+  <main>
+    <section class="intro">
+      <p>Explora algunos de los datos más curiosos sobre esta serie mágica y misteriosa.</p>
+    </section>
+    <section class="datos">
+      <h2>Datos curiosos</h2>
+      <ul id="datos-lista">
+        <li>El creador de la serie, Patrick McHale, trabajó previamente en "Hora de Aventura".</li>
+        <li>La serie está inspirada en cuentos antiguos y folklore americano.</li>
+        <li>El nombre del personaje Wirt proviene de un poema llamado "Wirt and the Goblins".</li>
+      </ul>
+    </section>
+    <section class="imagenes">
+      <h2>Personajes principales</h2>
+      <div class="galeria">
+        <figure>
+          <img src="wirt.png" alt="Wirt">
+          <figcaption>Wirt, el hermano mayor.</figcaption>
+        </figure>
+        <figure>
+          <img src="greg.png" alt="Greg">
+          <figcaption>Greg, el hermano menor y soñador.</figcaption>
+        </figure>
+        <figure>
+          <img src="beatrice.png" alt="Beatrice">
+          <figcaption>Beatrice, el pájaro azul que guía a los hermanos.</figcaption>
+        </figure>
+      </div>
+    </section>
+    <section class="interactivo">
+      <h2>¿Quieres saber más?</h2>
+      <button id="boton-dato">Mostrar un dato aleatorio</button>
+      <p id="dato-aleatorio"></p>
+    </section>
+  </main>
+  <footer>
+    <p>Hecho con ❤️ por un fan de Más allá del jardín.</p>
+  </footer>
+  <script>
+    const datosExtras = [
+      "La serie fue emitida originalmente en Cartoon Network en 2014.",
+      "Cada episodio tiene un estilo visual inspirado en distintas épocas y géneros.",
+      "La música de la serie incluye influencias de jazz, folk y música clásica.",
+      "El personaje Beatrice está inspirado en un cuento de hadas europeo.",
+      "La serie ganó un Emmy a Mejor Programa Animado en 2015."
+    ];
+
+    document.getElementById('boton-dato').addEventListener('click', () => {
+      const randomIndex = Math.floor(Math.random() * datosExtras.length);
+      const dato = datosExtras[randomIndex];
+      document.getElementById('dato-aleatorio').textContent = dato;
+    });
+  </script>
+</body>
+</html>
